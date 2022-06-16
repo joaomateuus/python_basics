@@ -9,10 +9,4 @@ numeros_impares = [numeros[1], numeros[2], numeros[3], numeros[5]]
 print(numeros_pares)
 print(numeros_impares)
 
-print(numeros[::2]) #pares
-print(numeros[1::2]) #impares
-print(numeros[::-1]) #reverso
-
-
-
 
