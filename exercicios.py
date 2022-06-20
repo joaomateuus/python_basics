@@ -28,39 +28,51 @@
 
 
 # - Criar um programa para adicionar funcionários. Os funcionários devem ter nome, sexo e salário o programa deve retornar a soma de salários dos homens e soma dos salários das mulheres
-funcionario1, funcionario2, funcionario3 = {
-    
-}
+# funcionarios = []
+funcionarios = []
+operador = 1
+salario_homens = []
+salario_mulheres = []
+lista_vazia = []
 
+while operador != 0:
+    print('[1] - inserir funcionario')
+    print('[2] - Mostrar soma salario dos homens')
+    print('[3] - Mostrar soma salario das mulheres')
+    print('[4] - Mostrar funcionarios')
+    print('[0] - encerrar programa')
+    operador = int(input('digite uma opcao: '))
+    if operador == 1:
+        funcionario = {}
+        nome = input('digite o nome: ')
+        sexo = input('m - masculino ou f - feminino: ')
+        salario = float(input('digite o salario: '))
 
-funcionarios = {
-    funcionario1: {
-        "nome": input(""" Qual o nome do funcionario """""),
-        "sexo": input(""" Qual o sexo do funcionario """""),
-        "salario": int(input(""" Qual o salario do funcionario """""))
-    },
+        funcionario['nome'] = nome
+        funcionario['sexo'] = sexo
+        funcionario['salario'] = salario
+        funcionarios.append(funcionario)
+    elif operador == 2:
+        for f in funcionarios:
+            if f["sexo"] == 'm':
+                salario_homens.append(f['salario'])
+        print(f'A soma do salario dos homens é:', (sum(salario_homens)))
+    elif operador == 3:
+        for f in funcionarios:
+            if f["sexo"] == "f":
+                salario_mulheres.append(f['salario'])
+        print(f'A soma do salario das mulheres é:', (sum(salario_mulheres)))
+    elif operador == 4:
+        if funcionarios == lista_vazia:
+            print('A lista esta vazia')
+        else:
+            print('Segue funcionarios')
+            print(funcionarios)
+    elif operador == 0:
+        print('fim do programa')
+        break
+    else:
+        print('opção inválida!')
 
-    funcionario2: {
-        "nome": input(""" Qual o nome do funcionario """""),
-        "sexo": input(""" Qual o sexo do funcionario """""),
-        "salario": int(input(""" Qual o salario do funcionario """""))
-    },
-
-    funcionario3: {
-        "nome": input(""" Qual o nome do funcionario """""),
-        "sexo": input(""" Qual o sexo do funcionario """""),
-        "salario": int(input(""" Qual o salario do funcionario """""))
-    }
-
-}
-
-for f in funcionarios:
-    print(f)
-
-
-
-# # soma_salarios = 
-# soma_salarios = funcionario1["salario"]+funcionario2["salario"]+funcionario3["salario"]
-
-# print(f"A soma dos salarios dos funcionarios é: {soma_salarios}")
+print(funcionarios)
 
