@@ -33,6 +33,8 @@ funcionarios = []
 operador = 1
 salario_homens = []
 salario_mulheres = []
+soma_mulheres = 0
+soma_homens = 0
 lista_vazia = []
 
 while operador != 0:
@@ -56,12 +58,16 @@ while operador != 0:
         for f in funcionarios:
             if f["sexo"] == 'm':
                 salario_homens.append(f['salario'])
-        print(f'A soma do salario dos homens é:', (sum(salario_homens)))
+                for v in salario_homens:
+                    soma_homens = v+v
+        print(f'A soma do salario dos homens é: {soma_homens}')
     elif operador == 3:
         for f in funcionarios:
             if f["sexo"] == "f":
                 salario_mulheres.append(f['salario'])
-        print(f'A soma do salario das mulheres é:', (sum(salario_mulheres)))
+                for v in salario_mulheres:
+                    soma_mulheres = v+v
+        print(f'A soma do salario das Mulheres é: {soma_mulheres}')
     elif operador == 4:
         if funcionarios == lista_vazia:
             print('A lista esta vazia')
