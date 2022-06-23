@@ -18,7 +18,7 @@
 # #         n *= a
 # #         return n
 
-# # numeros = [2, 3, 4, 5]
+
 # # print(multiplicar(*numeros))
 # # print(multiplicar(3, 4, 5, 6))
 
@@ -35,19 +35,15 @@
 # numeros["numero2"] = numero2
 # numeros["operacao"] = opera
 
+numeros = [2, 3, 4, 5]
 
-# def aritimetica(**kwargs):
-#     n1 = kwargs.get('numero1', 0)
-#     n2 = kwargs.get('numero2', 0)
-#     op = kwargs.get('operacao', '+')
+def aritimetica(**kwargs):
+    n1 = kwargs.get('numero1', 0)
+    n2 = kwargs.get('numero2', 0)
+    op = kwargs.get('operacao', '+')
     
-#     return eval(f'{n1} {op} {n2}')
+    return eval(f'{n1} {op} {n2}')
 
-# print(aritimetica(**numeros))
+print(aritimetica(**numeros))
 
-# Digitar um monte de coisa na calculadora e e fazer o calculo ex:23423+23423-4534534/4
-input_usuario = input('Digite a operacao que deseja fazer:  ')
-def calc_expressao(args):
-    return eval(args)
-print(calc_expressao(input_usuario))
 
