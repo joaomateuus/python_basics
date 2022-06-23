@@ -15,6 +15,7 @@ class Pessoa:
         diferenca = hoje - self.nascimento
         return int(diferenca.days/365)
 
+#HERANCA
 class PessoaFisica(Pessoa):
     def __init__(self, nome, cpf, nascimento):
         super().__init__(nome=nome, nascimento=nascimento)
